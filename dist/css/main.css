@@ -1,53 +1,160 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background: #9183b0;
+  background: #ffdede;
   color: black;
   height: 100%;
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.5; }
+  body.about {
+    background-image: url(../img/birthday-cake-7218890_1280.png);
+    background-size: 10rem;
+    background-attachment: fixed; }
+    body.about:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(255, 222, 222, 0.7); }
 
 html {
   height: 100%;
   margin: 0; }
 
 main {
-  padding: 4rem;
+  padding-top: 56px;
   min-height: calc(100vh - 60px); }
+  main.home {
+    display: grid;
+    place-items: center; }
+  main.about {
+    display: grid;
+    place-items: center; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.lg-header {
+  color: #ff4923;
+  text-align: center;
+  font-size: 3rem; }
 
 .main-header {
   display: flex;
   position: fixed;
   z-index: 2;
   width: 100vw; }
-  .main-header div {
-    border: 2px solid #e9d316;
-    background: #ada2c4;
+  .main-header .menu-item {
+    background: #ffb5b5;
     padding: 1rem 0;
-    text-align: center;
-    font-size: 1rem;
-    font-variant: small-caps;
     width: 100%;
-    cursor: pointer; }
-    .main-header div:hover {
-      color: #e9d316; }
+    text-align: center; }
+    .main-header .menu-item.current > a {
+      color: #ff4923; }
+  .main-header .link {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-out; }
+    .main-header .link:hover {
+      color: #ff4923;
+      transition: all 0.3s ease-out; }
 
-.main-page {
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  background: url("../img/pexels-terence-koh-8970204.jpg");
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-.big-heading {
-  text-align: center;
+.wrap {
+  border: dotted #ff4923 4px;
   border-radius: 50%;
-  color: #e9d316;
-  background-color: black; }
+  padding-bottom: 2rem;
+  margin: 2rem 2rem 2rem 2rem;
+  animation: borderAnimation 2s infinite linear; }
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ff4923;
+    /* Change border color at 0% keyframe */
+    border-style: dotted; }
+  25% {
+    border-color: #ff4923;
+    /* Change border color at 25% keyframe */
+    border-style: dashed; }
+  50% {
+    border-color: #ff4923;
+    /* Change border color at 25% keyframe */
+    border-style: solid; }
+  75% {
+    border-color: #ff4923;
+    /* Change border color at 25% keyframe */
+    border-style: dashed; }
+  100% {
+    border-color: #ff4923;
+    /* Change border color at 50% keyframe */
+    border-style: dotted; } }
+
+.main-page .random-btn {
+  text-align: center;
+  position: relative;
+  padding-top: 1rem;
+  top: 40%;
+  width: 100%; }
+  .main-page .random-btn .r-btn-link {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-out; }
+    .main-page .random-btn .r-btn-link:hover {
+      color: #ff4923;
+      transition: all 0.3s ease-out; }
+
+.main-page img {
+  display: block;
+  margin: auto;
+  width: 40%; }
+
+.round-head {
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  color: #ff4923;
+  font-size: 5rem; }
+  .round-head .W {
+    transform: translate(3px, 65px) rotate(-40deg); }
+  .round-head .E {
+    transform: translate(2px, 25px) rotate(-25deg); }
+  .round-head .L {
+    transform: translate(1px, 5px) rotate(-15deg); }
+  .round-head .C {
+    transform: translate(0px, 0px) rotate(0deg); }
+  .round-head .O {
+    transform: translate(-1px, 5px) rotate(15deg); }
+  .round-head .M {
+    transform: translate(-2px, 25px) rotate(25deg); }
+  .round-head .E2 {
+    transform: translate(-3px, 65px) rotate(40deg); }
+  .round-head span {
+    display: inline-block; }
+  .round-head h2 {
+    font-size: 1rem; }
+
+.about-page {
+  width: 50%;
+  background: #feffe9;
+  border: black 3px solid;
+  margin: 2rem 0 2rem 0; }
+  .about-page p {
+    padding: 1.5rem; }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: #75649c;
-  color: white;
-  height: 40px; }
+  background: #ffabab;
+  color: black;
+  height: 60px; }
