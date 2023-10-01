@@ -1,7 +1,10 @@
 $primary-color: rgb(255, 222, 222);
 $secondary-color: rgb(255, 73, 35);
+$third-color: rgb(254, 255, 233);
 
-
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
 
 // Media query mixins
 

@@ -1,7 +1,19 @@
-@include mediaXl {}
+@include mediaXl {
+    .recipes-all {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-@include mediaLg {}
+@include mediaLg {
+    .recipes-all {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-@include mediaMd {}
+@include mediaMd {
+    .recipes-all {
+        grid-template-columns: 1fr;
+    }
+}
 
 @include mediaSm {}

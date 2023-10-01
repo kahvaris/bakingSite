@@ -1,6 +1,5 @@
-//$primary-color: rgb(145, 131, 176);
-//$secondary-color: rgb(233, 211, 22);
 @import 'config';
+@import 'recipe';
 
 * {
     box-sizing: border-box;
@@ -50,6 +49,11 @@ main {
         place-items: center;
         
     }
+    &.recipes {
+        display: grid;
+        place-items: center;
+        
+    }
 }
 
 a {
@@ -61,6 +65,7 @@ a {
     color: $secondary-color;
     text-align: center;
     font-size: 3rem;
+    margin: auto;
 }
 
 
@@ -72,19 +77,18 @@ a {
     width: 100vw;
 
     .menu-item {
-        //border-bottom: 3px solid black;
         background: darken($primary-color, 8);
         padding: 1rem 0;
         width: 100%;
         text-align: center;
 
         &.current > a {
-            color: $secondary-color;
+            color: darken($secondary-color, 10);
         }
     }
 
     .link {
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: 500;
         text-transform: uppercase;
         color: black;
@@ -108,29 +112,24 @@ a {
 
 @keyframes borderAnimation {
     0% {
-      border-color: $secondary-color; /* Change border color at 0% keyframe */
-      border-style: dotted;
-      //transform: rotate(0deg);
+        border-color: $secondary-color; 
+        border-style: dotted;
     }
     25% {
-      border-color: $secondary-color; /* Change border color at 25% keyframe */
-      border-style: dashed;
-      //transform: rotate(0deg);
+        border-color: $secondary-color; 
+        border-style: dashed;
     }
     50% {
-      border-color: $secondary-color; /* Change border color at 25% keyframe */
-      border-style: solid;
-      //transform: rotate(0deg);
+        border-color: $secondary-color; 
+        border-style: solid;
     }
     75% {
-        border-color: $secondary-color; /* Change border color at 25% keyframe */
+        border-color: $secondary-color; 
         border-style: dashed;
-        //transform: rotate(0deg);
       }
     100% {
-      border-color: $secondary-color; /* Change border color at 50% keyframe */
-      border-style: dotted;
-      //transform: rotate(0deg);
+        border-color: $secondary-color;
+        border-style: dotted;
     }
   }
 
@@ -166,6 +165,9 @@ a {
     }
     
 }
+
+
+// Rounded index page header
 
 
 .round-head {
@@ -215,23 +217,90 @@ a {
 
 .about-page {
     width: 50%;
+    background: $third-color;
+    border: black 3px solid;
+    margin: 2rem 0 2rem 0;
+    padding: 2rem;
+    
+    p {
+        margin: 2rem auto auto auto;
+    }
+}
+
+
+.recipes-page {
+    width: 90%;
     background: rgb(254, 255, 233);
     border: black 3px solid;
     margin: 2rem 0 2rem 0;
-    
+    padding: 2rem;
+    text-align: center;
     p {
-        padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 
 
 
+.recipes-all {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .recipe {
+        position: relative;
+        cursor: pointer;
+        background-color: darken($primary-color, 4);
+        padding: 1rem;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(blue, 0.7);
+            z-index: 0;
+            opacity: 0%;
+        }
+    }
+
+    .recipe-header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        
+
+        .recipe-head{
+            margin: auto auto auto 0;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+        .time {
+            margin: auto 0 auto auto;
+            text-align: right;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+
+    p {
+        display: none;
+    }
+    img {
+        width: 50%;
+    }
+}
+
+
 
 footer {
-    //border-top: solid 3px black;
     text-align: center;
     padding: 1rem;
     background: darken($primary-color, 10);
     color: black;
     height: 60px;
 }
+
+
+@import 'mobile';
