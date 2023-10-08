@@ -2,6 +2,78 @@
     .recipes-all {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .post {
+        &.show {
+            .post-main {
+                left:0;
+                right:0;
+                margin-left:auto;
+                margin-right:auto;
+                width: 900px;
+                .flexwrap {
+                    display: grid;
+                    grid-gap: 1rem;
+                    grid-template-areas: 
+                    'postimage posttext'
+                    'postimage postlink';
+                    grid-template-columns: repeat(2, 1fr);
+                    .post-text {
+                        grid-area: posttext;
+                        text-align: left;
+                        margin: auto;
+                    }
+        
+                    .post-image {
+                        grid-area: postimage;
+                        align-items: left;
+                        margin: auto;
+                        width: 100%;
+                        max-height: 400px;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+    
+                    .post-link {
+                        grid-area: postlink;
+                        //padding: auto;
+                        margin-bottom: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .round-head {
+        font-size: 7rem;
+    
+        .W {
+            transform: translate(3px, 85px) rotate(-40deg);
+        }
+        .E {
+            transform: translate(2px, 25px) rotate(-25deg);
+        }
+        .L {
+            transform: translate(1px, 0px) rotate(-15deg);
+        }
+        .C {
+            transform: translate(0px, -5px) rotate(0deg);
+        }
+        .O {
+            transform: translate(-1px, 0px) rotate(15deg);
+        }
+        .M {
+            transform: translate(-2px, 30px) rotate(25deg);
+        }
+        .E2 {
+            transform: translate(-3px, 85px) rotate(40deg);
+        }
+    
+        h2 {
+            font-size: 1.5rem; 
+        }
+    
+    }
 }
 
 @include mediaLg {
@@ -14,6 +86,64 @@
     .recipes-all {
         grid-template-columns: 1fr;
     }
+
+    .round-head {
+        font-size: 4rem;
+    
+        .W {
+            transform: translate(3px, 65px) rotate(-45deg);
+        }
+        .E {
+            transform: translate(2px, 25px) rotate(-30deg);
+        }
+        .L {
+            transform: translate(1px, 5px) rotate(-17deg);
+        }
+        .C {
+            transform: translate(0px, 0px) rotate(0deg);
+        }
+        .O {
+            transform: translate(-1px, 5px) rotate(17deg);
+        }
+        .M {
+            transform: translate(-2px, 25px) rotate(30deg);
+        }
+        .E2 {
+            transform: translate(-3px, 65px) rotate(40deg);
+        }
+        
+        h2 {
+            margin-top: 2rem;
+        }
+    }
 }
 
-@include mediaSm {}
+@include mediaSm {
+    .round-head {
+        font-size: 3.5rem;
+    
+        .W {
+            transform: translate(13px, 55px) rotate(-45deg);
+        }
+        .E {
+            transform: translate(2px, 25px) rotate(-35deg);
+        }
+        .L {
+            transform: translate(1px, 5px) rotate(-17deg);
+        }
+        .O {
+            transform: translate(-1px, 5px) rotate(17deg);
+        }
+        .M {
+            transform: translate(-2px, 25px) rotate(30deg);
+        }
+        .E2 {
+            transform: translate(-13px, 55px) rotate(45deg);
+        }
+        
+        h2 {
+            margin-top: 3rem;
+
+        }
+    }
+}
