@@ -383,7 +383,7 @@ footer {
 
 @media screen and (max-width: 500px) {
   .round-head {
-    font-size: 3.5rem; }
+    font-size: 3rem; }
     .round-head .W {
       transform: translate(13px, 55px) rotate(-45deg); }
     .round-head .E {
