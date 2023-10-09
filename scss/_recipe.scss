@@ -11,12 +11,13 @@
     background: rgba(darken(rgb(194, 167, 167), 20), 0.6);
 
     opacity: 0;
-    transition: all 0.2s ease-out;
+    transition: all 0.0s ease-out;
     visibility: hidden;
 
     &.show {
         visibility: visible;
         opacity: 100;
+        transition: all 0.3s ease-out;
 
     }
     .post-main {

@@ -8,11 +8,12 @@
   overflow: hidden;
   background: rgba(152, 107, 107, 0.6);
   opacity: 0;
-  transition: all 0.2s ease-out;
+  transition: all 0.0s ease-out;
   visibility: hidden; }
   .post.show {
     visibility: visible;
-    opacity: 100; }
+    opacity: 100;
+    transition: all 0.3s ease-out; }
   .post .post-main {
     position: relative;
     left: 15%;
@@ -376,7 +377,9 @@ footer {
     .round-head .E2 {
       transform: translate(-3px, 65px) rotate(40deg); }
     .round-head h2 {
-      margin-top: 2rem; } }
+      margin-top: 2rem; }
+  .about-page {
+    width: 60%; } }
 
 @media screen and (max-width: 500px) {
   .round-head {
@@ -394,4 +397,6 @@ footer {
     .round-head .E2 {
       transform: translate(-13px, 55px) rotate(45deg); }
     .round-head h2 {
-      margin-top: 3rem; } }
+      margin-top: 3rem; }
+  .about-page {
+    width: 70%; } }

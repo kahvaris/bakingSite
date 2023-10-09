@@ -116,6 +116,10 @@
             margin-top: 2rem;
         }
     }
+
+    .about-page {
+        width: 60%;
+    }
 }
 
 @include mediaSm {
@@ -145,5 +149,9 @@
             margin-top: 3rem;
 
         }
+    }
+
+    .about-page {
+        width: 70%;
     }
 }
